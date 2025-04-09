@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <%- include('header') %>
+        <main>
+            <h1><%= site_title %></h1>
+            <% payments.forEach(payment => { %>
+                <div class="item">
+                    <img src="/profile/<%= payment.name %>.png">
+                    <div class="name"><%= payment.name %></div>
+                    <div class="amount"><%= payment.amount.toLocaleString() %></div>
+                </div>
+            <% }) %>
+            <% users.forEach(user => { %>
+                <div class="item">
+                    <div class="username"><%= user.username %></div>
+                    <div class="password"><%= user.password %></div>
+                </div>
+            <% }) %>
+            <form action="/new" method="POST">
+                <input type="text" name="username" placeholder="username">
+                <input type="text" name="password" placeholder="password">
+                <button type="submit">추가</button>
+            </form>
+        </main>
+        <%- include('footer') %>
+    </body>
+</html>

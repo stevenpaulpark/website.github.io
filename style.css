@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+:root{
+  --bg-clr: #1f1f1f;
+  --txt-clr: #f1f1f1;
+  --secondary-clr: #C0C0C0;
+  --main-clr: #FFD700;
+}
+body{
+  background-color: black;
+  color: var(--txt-clr);
+}
+header{
+    min-height: 100vh;
+    background: url(img/banner2.webp) no-repeat center;
+    background-size: cover;
+    width: 100%;
+  }
+  .container-nav, .container-inner{
+    margin: 0 auto;
+    width: 100%;
+  }
+  .container-nav{
+    max-width: 1350px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .container-inner{
+    max-width: 1000px;
+  }
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2em;
+    z-index: 9;
+    transition: 0.7s;
+    color: #fff;
+  }
+  .brand{
+    font-size: 1.6em;
+  }
+  nav .container-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  nav .container-nav ul{
+    width: 100%;
+    margin: 0 1em;
+  }
+  nav .container-nav ul:nth-child(2){
+    text-align: right;
+  }
+  nav .container-nav ul li{
+    display: inline-block;
+    margin: 0 0.7em;
+  }
+  nav a{
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: 0.3s;
+    font-weight: 600;
+    color: #fff;
+  }
+  nav a:hover{
+    color: #e54416;
+  }
+  .input-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 0;
+  }
+  .input-wrap li{
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  form input, form button{
+    background: none;
+    border: none;
+    color: #fff;
+  }
+  form button{
+    cursor: pointer;
+  }
+  form input::placeholder{
+    color: #fff;
+  }
+  form input:focus{
+    outline: none;
+  }
+  nav .fa-bars {
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: right;
+  }
+  nav .fa-bars:hover{
+    color: #e54416;
+  }
+  .menu{
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3em;
+    height: 0;
+    opacity: 0;
+    transition: 0.7s cubic-bezier(.74, -0.03, .83, .67);
+    overflow-y: hidden;
+  }
+  .logo{
+    width: 3em;
+  }
+  .menu ul, .menu form{
+    margin: 1em auto;
+  }
+  .menu li{
+    margin: 1em 0;
+  }
+  .menu > div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 6em 1em 3em 1em;
+    overflow-y: scroll;
+  }
+  .menu > div::-webkit-scrollbar{
+    display: none;
+  }
+  .menu .social-media{
+    margin: 2em 0;
+  }
+  .social-media li{
+    display: inline-block;
+    margin: 0 0.5em;
+  }
+  .menu img{
+    width: 150px;
+    border-radius: 50%;
+  }
+  
+  .menu-open{
+    height: 100vh;
+    opacity: 1;
+  }
+  .navbar-active{
+    background: #111;
+    padding: 1em;
+  }
+.welcomeBanner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.welcomeBanner div{
+  background-color: rgba(0, 0, 0, 0.74);
+  border-radius: 10px;
+  padding: 60px;
+}
+.welcomeBanner div h1{
+  font-size: 2.7rem;
+  margin-bottom: 14px;
+}
+.welcomeBanner div h1 span{
+  color: var(--main-clr);
+}
+.welcomeBanner div h3{
+  font-size: 1.1rem;
+  color: #ccc;
+}
+/*************************** sectiunea-bonus *****************************/
+.sectiune-bonus{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-bonus{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  max-width: 1700px;
+  width: 100%;
+  height: auto;
+  margin: 100px 0px;
+  border-radius: 4px;
+  padding: 0px 0px 30px 0px;
+}
+.sub-container-bonus{
+  display: grid;
+  grid-template-columns: 1fr;
+/*  gap: 26px;*/
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  background-color: var(--bg-clr);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin: 30px auto;
+}
+.rating-logo-sb{
+  display: flex;
+  height: 224px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.rating-sectiune-bonus{
+  display: flex;
+}
+.rating-txt-sc{
+  margin: 0px 10px;
+}
+.btn-sectiune-bonus{
+  margin-bottom: 20px;
+}
+.btn-sectiune-bonus a{
+  color: var(--txt-clr);
+  text-decoration: none;
+  border: 1px solid var(--main-clr);
+  padding: 8px;
+  border-radius: 10px;
+}
+.rating-icons-sc i{
+  color: goldenrod;
+}
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  background-color: black;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
+/* top section of bonus */
+.about-brave-casino{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+.about-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 1700px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.about-txt-top, .about-txt-top h2{
+  text-align: center;
+  font-size: 33px;
+}
+.about-txt-top p{
+  font-size: 25px;
+}
+
+.about-txt-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  margin: 100px 0px 0px 0px;
+}
+
+.atb-container i{
+  color: var(--main-clr);
+  font-size: 28px;
+}
+.atb-container p{
+  font-size: 19px;
+  padding-top: 6px;
+}
+
+.footer-container{
+  display: flex;
+  flex-direction: column;
+  border-top-color: silver;
+  border-top: 1px solid;
+  margin: 20px
+}
+.footer-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 40px;
+}
+.footer-copyright{
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+.footer-social ul{
+  display: flex;
+}
+.footer-social ul li{
+  margin: 0 10px;
+}
+.footer-links{
+  display: flex;
+  align-items: center;
+}
+.footer-links p{
+  margin: 0 10px;
+}
+.footer-links a{
+  color: var(--secondary-clr);
+}
+.footer-social i{
+  font-size: 20px;
+  color: var(--secondary-clr);
+}
+/* slider */
+#slider{
+  height: 500px;
+  border: 1px solid silver;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parteneri{
+  width: 1600px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 56px;
+}
+.parteneri-container{
+  width: 85%;
+  margin: auto;
+}
+.slide-img{
+  width: 100%;
+  height: 275px;
+  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.slide-img:hover{
+  box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
+}
+.slide-img a{
+  opacity: 0;
+  text-decoration: none;
+  transform: scale(0);
+  transition: 0.8s;
+  font-size: 1.5rem;
+  color: var(--txt-clr);
+}
+.slide-img:hover a{
+  opacity: 1;
+  transform: scale(1);
+}
+.img-1{
+  background-image: url(img/game_frame/frame_asia_gaming.webp);
+}
+.img-2{
+  background-image: url(img/game_frame/frame_pragmatic_play.webp);
+}
+.img-3{
+  background-image: url(img/game_frame/frame_relax_gaming.webp);
+}
+.parteneri-wrapper h2{
+  text-align: center;
+}
+/* Contact form */
+.contact-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid var(--secondary-clr);
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  margin: 50px auto;
+}
+.contact-top-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-info-txt{
+  margin: 0px 0px 100px 0px;
+  text-align: left;
+  font-size: 24px;
+}
+.contact-info-box{
+  font-size: 19px;
+  margin: 16px auto;
+  text-align: left;
+}
+.contact-inputs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 20px;
+}
+
+.contact-inputs-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+}
+.contact-inputs-container{
+  gap: 20px;
+  margin: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-inputs-container input{
+  height: 30px;
+  max-width: 360px;
+  width: 100%;
+  padding: 0px 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+}
+.contact-inputs-container textarea{
+  max-width: 360px;
+  width: 100%;
+  padding: 4px 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+}
+.contact-send-btn{
+  height: 30px;
+  border: none;
+  width: 160px;
+  background-color: var(--secondary-clr);
+  color: var(--bg-clr);
+  font-size: 16px;
+  border-radius: 6px;
+}
+.contact-send-btn:hover{
+  background-color: rgb(180, 180, 180)
+}
+.contact-send-btn:active{
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
+
+/* Termeni si conditii */
+.wrapper-conf{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.wrapper-termeni{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--secondary-clr);
+  margin: 20px;
+}
+.title-termeni{
+  margin: 30px;
+}
+.text-termeni{
+  margin: 0 20px;
+}
+@media(max-width: 1600px){
+  .parteneri{
+    width: 100%;
+  }
+}
+
+@media(max-width: 768px){
+  header{
+    height: 48px;
+  }
+  .logo a{
+    font-size: 0.9rem;
+  }
+  .logo img{
+    width: 30px;
+  }
+  .fa-bars{
+    display: inline;
+    color: #eeee;
+    font-size: 24px;
+  }
+  .fa-xmark{
+    position: absolute;
+    right: 24px;
+    display: block;
+    font-size: 24px;
+    border-radius: 50%;
+  }
+  .fa-xmark:hover{
+    background-color: #00adb5;
+  }
+  .brand{
+    margin-left: 25px;
+  }
+  .nav{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #222831;
+    color: #eeee;
+    width: 60%;
+    height: 100vh;
+    padding: 24px 0;
+    z-index: 99;
+    transition: 0.5s;
+    border-radius: 0 0 0 50%;
+  }
+  .nav_list{
+    display: flex;
+    flex-direction: column;
+  }
+  .nav_item{
+    margin: 2rem 0;
+  }
+  .show{
+    right: 0;
+  }
+  .container-inner{
+    display: none !important;
+  }
+  .container-bonus{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-links{
+    display: flex;
+    flex-direction: column;
+  }
+  .about-txt-bottom{
+    display: flex;
+    flex-direction: column;
+  }
+  /* contact page */
+  .contact-container{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .contact-info-txt{
+    margin: 0;
+    margin-top: 20px;
+  }
+  .footer-links{
+    font-size: 14px;
+  }
+  .footer-social i{
+    font-size: 16px;
+  }
+  .footer-copyright{
+    font-size: 14px;
+  }
+}
+@media(min-width: 800px){
+  .menu form {
+      display: none;
+  }
+}
+@media(max-width: 400px){
+  .contact-inputs-container input, textarea{
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .brand {
+      width: 250%;  
+      height: auto;
+  }
+}
